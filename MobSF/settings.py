@@ -68,13 +68,17 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
-MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
+
+HOME_DIR=os.path.join(os.path.expanduser("~"),".mobsf/")
+
+MEDIA_ROOT = os.path.join(HOME_DIR, 'uploads/')
 MEDIA_URL = '/uploads/'
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,'templates'),
     )
 STATICFILES_DIRS = (
   os.path.join(BASE_DIR, 'static/'),
+  os.path.join(HOME_DIR, 'static/')
 )
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/dev/howto/static-files/
@@ -83,15 +87,15 @@ STATIC_URL = '/static/'
 # DO NOT EDIT ANYTHING ABOVE THIS
 #xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 #Logs Directory
-LOG_DIR=os.path.join(BASE_DIR,'logs/')
+LOG_DIR=os.path.join(HOME_DIR,'logs/')
 #Static Directory
 STATIC_DIR=os.path.join(BASE_DIR,'static/')
 #Download Directory
-DWD_DIR=os.path.join(STATIC_DIR, 'downloads/')
+DWD_DIR=os.path.join(HOME_DIR,'static', 'downloads/')
 #Upload Directory
-UPLD_DIR=os.path.join(BASE_DIR,'uploads/')
+UPLD_DIR=os.path.join(HOME_DIR,'uploads/')
 #Database Directory
-DB_DIR = os.path.join(BASE_DIR, 'db.sqlite3')
+DB_DIR = os.path.join(HOME_DIR, 'db.sqlite3')
 
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
