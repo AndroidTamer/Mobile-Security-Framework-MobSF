@@ -5,6 +5,9 @@ __pycache__/
 # Apple DS_Store
 .DS_Store
 
+# SQlite Db
+dq.sqlite3
+
 # C extensions
 *.so
 
